@@ -147,13 +147,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AllIncludes.h" />
-    <ClInclude Include="LZW.h" />
-    <ClInclude Include="MNode.h" />
+    <ClInclude Include="Mapper.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Allincludes.cpp" />
-    <ClCompile Include="LZW.cpp" />
-    <ClCompile Include="MNode.cpp" />
+    <ClCompile Include="Mapper.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

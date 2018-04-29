@@ -24,9 +24,6 @@
 #include<stack>
 #include<unordered_set>
 #include <unordered_map>
-
-#include <cstring>
-#include <cctype>
 using namespace std;
 #define all(v) (v).begin(),(v).end()
 #define SRT(v) sort(all(v))

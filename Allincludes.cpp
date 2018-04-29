@@ -24,7 +24,7 @@ wstring LoadUtf8FileToString(const wstring & filename)
 	if (filesize > 0)
 	{
 		buffer.resize(filesize);
-		size_t wchars_read = fread(&(buffer.front()), sizeof(wchar_t), filesize, f);
+		size_t wchars_read = fread(&(buffer.front()), sizeof(wchar_t),filesize, f);
 		buffer.resize(wchars_read);
 		buffer.shrink_to_fit();
 	}

@@ -1,5 +1,5 @@
 #include"AllIncludes.h"
-#include"LZW.h"
+#include"Arithmtic.h"
 #include <locale>
 
 int main()
@@ -10,22 +10,12 @@ int main()
 	cin >> op;
 	if (op == "1")
 	{
-		ifstream* infile = new ifstream("input.tsv", ifstream::binary);
-		infile->seekg(0, infile->end);
-		long size = infile->tellg();
-		infile->seekg(0);
-		char* buffer = new char[size];
-		infile->read(buffer, size);
-		string text = "";
-		for (long i = 0; i < size; i++)
-		{
-			text += buffer[i];
-		}
-		LZW* l = LZW::getinstance();
+		wstring text = LoadUtf8FileToString(L"input.tsv");
+		Arithmtic* l = Arithmtic::getinstance();
 		string entext = l->Encode(text);
 		ofstream out("Encoded.tsv");
 		out << entext;
-		out.close();
+		out.close(); 
 	}
 	else
 	{
@@ -40,11 +30,12 @@ int main()
 		{
 			text += buffer[i];
 		}
-		LZW* l = LZW::getinstance();
-		string detext = l->Decode(text);
-		ofstream out("Decoded.tsv");
-		out << detext;
-		out.close();
+		Arithmtic* l = Arithmtic::getinstance();
+		wstring detext = l->Decode(text);
+		if (auto f = wofstream("Decoded.tsv")) {
+			f.imbue(locale(std::locale(), new std::codecvt_utf8_utf16<wchar_t>));
+			f << detext;
+		}
 	}
 	return 0;
 }

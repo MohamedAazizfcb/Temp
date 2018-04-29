@@ -18,10 +18,7 @@
     <ClInclude Include="AllIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LZW.h">
+    <ClInclude Include="Mapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,13 +26,10 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LZW.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Allincludes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
